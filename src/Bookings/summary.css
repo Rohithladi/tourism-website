@@ -1,0 +1,11 @@
+/* Summary.css */
+
+/* Remove any animation related to the plane GIF */
+
+/* Disable the plane animation and smoke effect since it's no longer needed */
+.smoke-effect, .animate-moveIcon {
+    display: none; /* Hide the smoke and animation */
+  }
+  
+  /* You can add any other styles you need for the summary here */
+  

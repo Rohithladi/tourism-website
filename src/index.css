@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* In your main CSS file */
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.text-shadow {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+/* Custom floating animation */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* Adjust this value for height of float */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.icon-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.moving-icon {
+  position: absolute;
+  font-size: 3rem; /* Adjust size as needed */
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Floating animation with Tailwind's apply */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Adjust positions for icons */
+.moving-icon:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
+.moving-icon:nth-child(2) { top: 30%; left: 30%; animation-delay: 1s; }
+.moving-icon:nth-child(3) { top: 50%; left: 50%; animation-delay: 2s; }
+.moving-icon:nth-child(4) { top: 70%; left: 70%; animation-delay: 3s; }
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 1.5s infinite;
+}
+
+/* Apply to icons */
+.icon {
+  font-size: 2rem; /* Size can be adjusted */
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* In your tailwind.css or index.css file */
+
+@keyframes fadeInUpCustom {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate__fadeInUpCustom {
+  animation: fadeInUpCustom 0.8s ease-out forwards;
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
